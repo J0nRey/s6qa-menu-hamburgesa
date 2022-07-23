@@ -1,0 +1,48 @@
+.hamb-button{
+    width: 50px;
+    height: 50px;
+    display: block; //pasar de elemento de linea a bloque
+    border: 1px solid #333;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;}
+    //pseudo elemento
+    &:before{
+        content: "";
+        width: 60%;
+        height: 2px;
+        display: block;
+        background-color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 14px;
+        //sombra
+        box-shadow: 0px 10px 0 0 #333, 0px 20px 0 0 #333;
+    }
+    
+}
+
+
+
+//seleccionando un imput de tipo checkbox 
+//y este esté marcado que no se vea
+    /*input[type="checkbox"]:checked{
+        display: none;
+    }*/
+
+//selecionando la ul que este inmediatamente 
+//despues de un input tipo checkbox marcado
+//que la ul no se vea
+    /*input[type="checkbox"]:checked + ul{
+        display: none;
+    }*/
+
+//seleccionando un input de tipo checkbox
+//que no se vea
+//y al hacer checked que la ul no se vea
+input[type="checkbox"]{
+    display: none;
+    &:checked + ul{
+        display: none;
+    } 
+}
